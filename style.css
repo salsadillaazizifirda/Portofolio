@@ -2411,118 +2411,207 @@ img {
 
 
 
-/* HOME KHUSUS HP */
-@media (max-width: 768px) {
+
+
+/* =====================================
+   HOME MOBILE - FIX RESPONSIVE LAYOUT
+   ===================================== */
+
+@media screen and (max-width: 768px) {
 
     .home {
-        min-height: auto;
-        padding: 30px 22px 40px;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 24px 20px 40px !important;
+        box-sizing: border-box;
+        overflow: visible;
     }
 
     .home-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 24px !important;
+
+        width: 100%;
+        max-width: 430px;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 auto;
+        padding: 0;
+
+        box-sizing: border-box;
     }
 
-    /* FOTO PROPORSIONAL */
+    /* FOTO */
     .home-photo {
-        order: 1;
-        width: 100%;
-        display: flex;
+        order: 1 !important;
+        display: flex !important;
         justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 0 0 auto;
     }
 
     .home-photo img {
-        width: auto;
-        height: 230px;
-        max-width: 75%;
-        object-fit: contain;
-        object-position: center bottom;
         display: block;
+        width: auto;
+        height: 200px;
+        max-width: 75%;
+        max-height: 200px;
+        object-fit: contain;
+        object-position: center;
+        margin: 0 auto;
     }
 
-    /* TEKS */
+    /* TEKS DI BAWAH FOTO */
     .home-content {
-        order: 2;
+        order: 2 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+
         width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
         text-align: center;
+
+        flex: 0 0 auto;
     }
 
     .welcome-text {
+        margin: 0 0 10px !important;
+        padding: 0;
+
         font-size: 12px;
-        letter-spacing: 4px;
-        margin: 0 0 10px;
+        line-height: 1.5;
+        letter-spacing: 3px;
+        text-align: center;
     }
 
     .portfolio-title {
-        font-size: clamp(34px, 9vw, 44px);
+        margin: 0 0 18px !important;
+        padding: 0;
+
+        font-size: clamp(30px, 8vw, 40px);
         line-height: 1.1;
-        margin: 0 0 22px;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    /* INFORMASI DIRI */
+    .home-info {
+        display: block !important;
+        width: 100%;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0;
+        text-align: center;
     }
 
     .home-info h2 {
-        font-size: clamp(21px, 5.5vw, 26px);
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+
+        font-size: clamp(20px, 5.5vw, 24px);
         line-height: 1.35;
-        margin: 0;
-        padding-left: 0;
-        border-left: none;
+        overflow-wrap: anywhere;
+        text-align: center;
     }
 
     /* KONTAK */
     .home-contact {
-        width: fit-content;
-        max-width: 100%;
-        margin: 20px auto 0;
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         align-items: flex-start;
-        gap: 13px;
+        justify-content: flex-start;
+
+        width: fit-content;
+        max-width: 100%;
+        height: auto !important;
+        margin: 20px auto 0 !important;
+        padding: 0 !important;
+        gap: 12px;
+
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .contact-item {
-        display: flex;
+        display: flex !important;
         align-items: flex-start;
         gap: 10px;
+
+        width: 100%;
         max-width: 100%;
-        font-size: 13px;
+        margin: 0;
+        padding: 0;
+
+        color: #243f5c;
+        font-size: 12px;
         line-height: 1.5;
         text-align: left;
+        text-decoration: none;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
     }
 
     .contact-item i {
-        flex-shrink: 0;
-        width: 18px;
+        display: inline-block;
+        flex: 0 0 18px;
         margin-top: 2px;
+        color: #527da8;
     }
 
     .contact-item span {
+        display: inline-block;
+        flex: 1 1 auto;
+        min-width: 0;
         overflow-wrap: anywhere;
         word-break: break-word;
     }
 }
 
-/* HP PENDEK */
-@media (max-width: 768px) and (max-height: 750px) {
+/* HP DENGAN LAYAR KECIL */
+@media screen and (max-width: 380px) {
+
     .home {
-        padding-top: 18px;
+        padding: 20px 16px 32px !important;
+    }
+
+    .home-container {
+        gap: 20px !important;
     }
 
     .home-photo img {
         height: 175px;
+        max-height: 175px;
     }
 
-    .home-container {
-        gap: 12px;
+    .welcome-text {
+        font-size: 10px;
+        letter-spacing: 2.5px;
     }
 
     .portfolio-title {
-        margin-bottom: 14px;
-    }
-
-    .home-contact {
-        margin-top: 14px;
-        gap: 9px;
+        font-size: 30px;
     }
 }
