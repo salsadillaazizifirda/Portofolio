@@ -265,6 +265,25 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+}
+
+
+
 /* =====================================================
    HOME
 ===================================================== */
@@ -2209,4 +2228,183 @@ body {
 
     }
 
+}
+
+
+/* ================================
+   RESPONSIVE WEBSITE
+================================ */
+
+/* Pastikan ukuran elemen terkontrol */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HOME */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+}
+
+/* FOTO PROFIL */
+.home-photo {
+    flex: 0 1 350px;
+    min-width: 0;
+}
+
+.home-photo img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* TEKS HOME */
+.home-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.portfolio-title {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.home-info h2 {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* KONTAK */
+.home-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-item span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* TABLET DAN HP */
+@media (max-width: 768px) {
+
+    .home {
+        min-height: 100vh;
+        padding: 40px 24px;
+    }
+
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .home-photo {
+        flex: none;
+        width: 100%;
+    }
+
+    .home-photo img {
+        width: min(65%, 250px);
+        margin: 0 auto;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .portfolio-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .home-info h2 {
+        font-size: clamp(1.2rem, 5vw, 1.7rem);
+    }
+
+    .home-contact {
+        align-items: center;
+        gap: 14px;
+    }
+
+    .contact-item {
+        max-width: 100%;
+        text-align: left;
+        font-size: 13px;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 400px) {
+
+    .home {
+        padding: 30px 18px;
+    }
+
+    .home-container {
+        gap: 22px;
+    }
+
+    .home-photo img {
+        width: min(70%, 210px);
+    }
+
+    .welcome-text {
+        font-size: 12px;
+    }
+
+    .portfolio-title {
+        font-size: 1.9rem;
+    }
+
+    .home-info h2 {
+        font-size: 1.15rem;
+    }
+
+    .contact-item {
+        font-size: 12px;
+        gap: 8px;
+    }
 }
