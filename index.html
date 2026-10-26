@@ -568,13 +568,32 @@
         <div class="experience-grid">
 
 
+            <!-- ================= BI & OJK ================= -->
+
+            <article class="experience-card"
+                     onclick="openExperience('BI & OJK')">
+
+                <span class="experience-number">
+                    01
+                </span>
+
+                <h3>
+                    Finalist – PIDI: Digdaya X Hackathon BI & OJK 2026
+                </h3>
+
+                <span class="click-detail">
+                    View Experience →
+                </span>
+
+            </article>
+            
             <!-- ================= MAGANG BPS ================= -->
 
             <article class="experience-card"
                      onclick="openExperience('bps')">
 
                 <span class="experience-number">
-                    01
+                    02
                 </span>
 
                 <h3>
@@ -594,7 +613,7 @@
                      onclick="openExperience('asisten')">
 
                 <span class="experience-number">
-                    02
+                    03
                 </span>
 
                 <h3>
@@ -614,7 +633,7 @@
                      onclick="openExperience('tentor')">
 
                 <span class="experience-number">
-                    03
+                    04
                 </span>
 
                 <h3>
@@ -634,7 +653,7 @@
                      onclick="openExperience('hima')">
 
                 <span class="experience-number">
-                    04
+                    05
                 </span>
 
                 <h3>
@@ -855,9 +874,32 @@
 
         </div>
 
-        <!-- PROJECT 6 - RPubs -->
+        <!-- PROJECT 6 - PUBLICATION -->
+        <div class="project-card" onclick="openProject('project6')">
 
-<div class="project-card" onclick="openProject('project6')">
+            <div class="project-image">
+                <img src="images/journal2.jpg"
+                     alt="Journal Publication">
+            </div>
+
+            <div class="project-info">
+
+                <span>Publication</span>
+
+                <h3>Regresi Nonparametrik Deret Fourier</h3>
+
+                <p>
+                    Regression · Fourier Series · Statistical Analysis
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 7 - RPubs -->
+
+<div class="project-card" onclick="openProject('project7')">
 
     <div class="project-image">
         <img src="images/rpubs.jpg"
@@ -1084,8 +1126,6 @@
 
 </div>
 
-
-
 <!-- PROJECT 5 - JOURNAL -->
 
 <div class="project-modal" id="project5">
@@ -1132,14 +1172,60 @@
 
 </div>
 
-<!-- PROJECT 6 - RPubs -->
+<!-- PROJECT 6 - JOURNAL -->
 
 <div class="project-modal" id="project6">
 
     <div class="modal-content">
 
         <button class="close-btn"
-                onclick="closeProject('project5')">
+                onclick="closeProject('project6')">
+            &times;
+        </button>
+
+        <span class="modal-category">
+            PUBLICATION
+        </span>
+
+        <h2>
+            Regresi Nonparametrik Deret Fourier
+        </h2>
+
+        <p>
+            Penelitian mengenai Pemodelan Prevalensi Kasus Demam Berdarah Dengue (DBD) 
+            Tiga Provinsi di Sumatera Bagian Selatan (Lampung, Bengkulu, dan Sumatera Selatan) 
+            dengan Regresi Nonparametrik Deret Fourier
+        </p>
+
+        <div class="modal-tools">
+
+            <span>R</span>
+            <span>Regression</span>
+            <span>Fourier Series</span>
+            <span>Statistical Analysis</span>
+
+        </div>
+
+        <a href="https://openjournal.unpam.ac.id/index.php/sm/article/view/49630"
+           target="_blank"
+           class="project-button">
+
+            View Journal
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- PROJECT 7 - RPubs -->
+
+<div class="project-modal" id="project7">
+
+    <div class="modal-content">
+
+        <button class="close-btn"
+                onclick="closeProject('project7')">
             &times;
         </button>
 
@@ -1270,16 +1356,47 @@ document.addEventListener("keydown", function(event) {
             <div class="certificate-card">
 
                 <img
+                    src="images/certificates/certificate15.jpg"
+                    alt="Certificate">
+
+            </div>
+
+            <div class="certificate-card">
+
+                <img
+                    src="images/certificates/certificate16.jpg"
+                    alt="Certificate">
+
+            </div>
+            
+            <div class="certificate-card">
+
+                <img
                     src="images/certificates/certificate1.jpg"
                     alt="Certificate">
 
             </div>
 
+            <div class="certificate-card">
+
+                <img
+                    src="images/certificates/certificate17.jpg"
+                    alt="Certificate">
+
+            </div>
 
             <div class="certificate-card">
 
                 <img
                     src="images/certificates/certificate2.jpg"
+                    alt="Certificate">
+
+            </div>
+
+            <div class="certificate-card">
+
+                <img
+                    src="images/certificates/certificate18.jpg"
                     alt="Certificate">
 
             </div>
@@ -1498,7 +1615,7 @@ const experienceData = {
 
     bps: {
 
-        number: "01",
+        number: "02",
 
         title:
             "Magang – Badan Pusat Statistik",
@@ -1530,11 +1647,46 @@ const experienceData = {
     },
 
 
+        /* ================= BI & OJK ================= */
+
+    "BI & OJK": {
+
+        number: "01",
+
+        title:
+            "Finalist – PIDI: Digdaya X Hackathon BI & OJK 2026",
+
+        description: [
+
+            "Berhasil mencapai tahap finalis 40 besar tim mahasiswa dalam kompetisi Hackathon yang diikuti sekitar 2000 Tim ",
+
+            "Berkolaborasi bersama tim dalam mengembangkan GitHire, platform berbasis AI yang membantu mahasiswa tingkat akhir dan lulusan baru menemukan pekerjaan sesuai keterampilan mereka",
+
+            "Berperan sebagai Data Support & User Insight, mendukung analisis kebutuhan pengguna dan mengidentifikasi tantangan dalam proses pencarian kerja",
+
+            "Berkontribusi dalam pengembangan ide pencocokan kandidat dengan lowongan berdasarkan CV, profil GitHub, dan keterampilan menjadi profil portofolio"
+
+        ],
+
+        images: [
+
+            "images/experience/bi-ojk1.jpg",
+
+            "images/experience/bi-ojk2.jpg",
+
+            "images/experience/bi-ojk3.jpg",
+
+            "images/experience/bi-ojk4.jpg"
+
+        ]
+
+    },
+    
     /* ================= ASISTEN ================= */
 
     asisten: {
 
-        number: "02",
+        number: "03",
 
         title:
             "Asisten Praktikum",
@@ -1573,7 +1725,7 @@ const experienceData = {
 
     tentor: {
 
-        number: "03",
+        number: "04",
 
         title:
             "Tentor – Lembaga Belajar",
@@ -1607,7 +1759,7 @@ const experienceData = {
 
     hima: {
 
-        number: "04",
+        number: "05",
 
         title:
             "Himpunan Mahasiswa Statistika",
