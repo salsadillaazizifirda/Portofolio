@@ -318,6 +318,38 @@ body {
 }
 
 
+.home-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #24364b;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.contact-item i {
+    width: 18px;
+    font-size: 17px;
+    color: #527da8;
+}
+
+.contact-item:hover {
+    color: #527da8;
+}
+
+.contact-item span {
+    overflow-wrap: anywhere;
+}
+
+
 /* =====================================================
    HOME PHOTO
 ===================================================== */
