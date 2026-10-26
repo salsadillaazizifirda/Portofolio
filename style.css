@@ -2410,208 +2410,267 @@ img {
 }
 
 
-
-
-
-/* =====================================
-   HOME MOBILE - FIX RESPONSIVE LAYOUT
-   ===================================== */
+/* ==========================================
+   RESPONSIVE NAVBAR + HOME MOBILE
+   ========================================== */
 
 @media screen and (max-width: 768px) {
 
+    /* NAVBAR */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 78px;
+        box-sizing: border-box;
+        padding: 16px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 16px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* HOME SECTION */
     .home {
-        min-height: auto !important;
-        height: auto !important;
-        padding: 24px 20px 40px !important;
+        position: relative;
+        min-height: 100vh;
+        height: auto;
+        box-sizing: border-box;
+
+        /* Memberi ruang di bawah navbar fixed */
+        padding: 105px 20px 40px !important;
+
+        overflow: visible;
+    }
+
+    /* CONTAINER */
+    .home-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 0;
+        gap: 26px;
+
         box-sizing: border-box;
         overflow: visible;
     }
 
-    .home-container {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-start !important;
-        align-items: center !important;
-        gap: 24px !important;
-
-        width: 100%;
-        max-width: 430px;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 auto;
-        padding: 0;
-
-        box-sizing: border-box;
-    }
-
     /* FOTO */
     .home-photo {
-        order: 1 !important;
-        display: flex !important;
+        order: 1;
+        position: relative;
+        z-index: 1;
+
+        display: flex;
         justify-content: center;
         align-items: center;
 
         width: 100%;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        flex: 0 0 auto;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+
+        overflow: visible;
     }
 
     .home-photo img {
         display: block;
+        position: relative;
+
         width: auto;
-        height: 200px;
-        max-width: 75%;
-        max-height: 200px;
+        height: 230px;
+        max-width: 80%;
+        max-height: none;
+
         object-fit: contain;
-        object-position: center;
+        object-position: center center;
+
         margin: 0 auto;
+        transform: none;
     }
 
-    /* TEKS DI BAWAH FOTO */
+    .home-photo img:hover {
+        transform: none;
+    }
+
+    /* SELURUH TEKS DI BAWAH FOTO */
     .home-content {
-        order: 2 !important;
-        display: flex !important;
+        order: 2;
+        position: relative;
+        z-index: 1;
+
+        display: flex;
         flex-direction: column;
         align-items: center;
 
-        position: relative !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-
         width: 100%;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        text-align: center;
+        height: auto;
+        min-height: 0;
 
-        flex: 0 0 auto;
-    }
-
-    .welcome-text {
-        margin: 0 0 10px !important;
+        margin: 0;
         padding: 0;
 
-        font-size: 12px;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* WELCOME TEXT */
+    .welcome-text {
+        margin: 0 0 12px;
+        padding: 0;
+
+        font-size: 11px;
         line-height: 1.5;
         letter-spacing: 3px;
         text-align: center;
     }
 
+    /* PORTFOLIO TITLE */
     .portfolio-title {
-        margin: 0 0 18px !important;
-        padding: 0;
-
-        font-size: clamp(30px, 8vw, 40px);
-        line-height: 1.1;
-        text-align: center;
-        overflow-wrap: break-word;
-    }
-
-    /* INFORMASI DIRI */
-    .home-info {
-        display: block !important;
         width: 100%;
-        height: auto !important;
-        margin: 0 !important;
+        margin: 0 0 20px;
         padding: 0;
-        text-align: center;
-    }
 
-    .home-info h2 {
-        margin: 0 !important;
-        padding: 0 !important;
-        border: none !important;
+        font-size: clamp(34px, 9vw, 48px);
+        line-height: 1;
+        letter-spacing: -1px;
 
-        font-size: clamp(20px, 5.5vw, 24px);
-        line-height: 1.35;
+        white-space: normal;
         overflow-wrap: anywhere;
         text-align: center;
     }
 
+    /* INFORMASI DIRI */
+    .home-info {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        border-left: none;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .home-info h2 {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        font-size: clamp(20px, 5.5vw, 25px);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
     /* KONTAK */
     .home-contact {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
 
         width: fit-content;
         max-width: 100%;
-        height: auto !important;
-        margin: 20px auto 0 !important;
-        padding: 0 !important;
+        height: auto;
+
+        margin: 20px auto 0;
+        padding: 0;
         gap: 12px;
 
-        visibility: visible !important;
-        opacity: 1 !important;
+        visibility: visible;
+        opacity: 1;
+        box-sizing: border-box;
     }
 
     .contact-item {
-        display: flex !important;
+        display: flex;
         align-items: flex-start;
         gap: 10px;
 
         width: 100%;
         max-width: 100%;
-        margin: 0;
-        padding: 0;
 
-        color: #243f5c;
         font-size: 12px;
         line-height: 1.5;
         text-align: left;
-        text-decoration: none;
 
-        visibility: visible !important;
-        opacity: 1 !important;
-        overflow-wrap: anywhere;
+        visibility: visible;
+        opacity: 1;
         box-sizing: border-box;
     }
 
     .contact-item i {
-        display: inline-block;
         flex: 0 0 18px;
         margin-top: 2px;
-        color: #527da8;
     }
 
     .contact-item span {
-        display: inline-block;
-        flex: 1 1 auto;
+        flex: 1;
         min-width: 0;
         overflow-wrap: anywhere;
         word-break: break-word;
     }
 }
 
-/* HP DENGAN LAYAR KECIL */
+/* HP LAYAR KECIL */
 @media screen and (max-width: 380px) {
 
-    .home {
-        padding: 20px 16px 32px !important;
+    .navbar {
+        padding: 14px 8px;
     }
 
-    .home-container {
-        gap: 20px !important;
+    .nav-menu {
+        gap: 9px 12px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .home {
+        padding: 100px 16px 32px !important;
     }
 
     .home-photo img {
-        height: 175px;
-        max-height: 175px;
-    }
-
-    .welcome-text {
-        font-size: 10px;
-        letter-spacing: 2.5px;
+        height: 205px;
     }
 
     .portfolio-title {
-        font-size: 30px;
+        font-size: 34px;
     }
 }
